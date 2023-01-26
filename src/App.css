@@ -1,52 +1,116 @@
-.mainContainer {
-  margin: 50px;
+.App {
   text-align: center;
 }
 
-.title {
-  font-size: 36px;
-  margin-bottom: 30px;
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
 }
 
-.inputField {
-  padding: 10px;
-  margin-right: 10px;
-  font-size: 18px;
-}
-
-.addButton {
-  padding: 10px 20px;
-  background-color: #4CAF50;
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
   color: white;
-  font-size: 18px;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+/* TO DO LIST FORM */
+
+#todoList-form {
+  padding-top: 50px;
+  width: 50%;
+  margin: 50px auto;
+}
+
+#todoList-form input {
+  height: 30px;
+  width: 80%;;
+  padding-left: 10px;
+  background-color: #F2F3F8;
   border: none;
-  cursor: pointer;
+
 }
 
-.taskList {
-  list-style-type: none;
-  margin-top: 30px;
-  padding: 0;
+#todoList-form button {
+  padding: 5px 40px;
+  border: none;
+  background-color: #6B7FD7;
+  color: #fefefe;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 4px;
+  margin: 15px;
 }
 
-.taskItem {
+/* TO DO LIST ITEMS  */
+
+.done {
+  text-decoration: line-through;
+  color: #858585;
+}
+
+.done input[type=text] {
+  color: #858585;
+}
+
+
+.del-btn {
+  border: none;
+  background: none;
+  color: #37392E;
+  font-size: 16px;
+  font-weight: 100;
+}
+
+li {
+  width: 50%;
+  background-color: #BFC1D1;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 5px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  margin-bottom: 10px;
-  background-color: #f2f2f2;
+  /* justify-content: space-between; */
 }
 
-.taskText {
-  font-size: 18px;
+li input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  background: none;
 }
 
-.deleteButton {
-  background-color: #f44336;
-  color: white;
-  font-size: 18px;
-  padding: 5px 10px;
+li input[type="text"] {
+  background: transparent;
   border: none;
-  cursor: pointer;
+  outline: none;
+  padding: 0 5px;;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: left;
+  /* justify-content: flex-start; */
+   flex-grow: 2;
+}
+
+li input[type="text"]:focus {
+  background-color: #F2F3F8;
+  color: #37392E;
+}
+
+li button {
+  justify-content: flex-end;
+}
+
+/* MEDIA QUERY  */
+
+@media screen and (max-width: 480px) {
+  li {
+    width: 90%;
+  }
 }
